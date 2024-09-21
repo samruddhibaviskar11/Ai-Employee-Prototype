@@ -1,0 +1,74 @@
+### Project Documentation: AI Employee - Data Analysis and Reporting
+
+#### Overview
+
+This project provides an interactive web application using Streamlit to analyze and report on datasets. The application allows users to upload CSV files, perform various data analyses, and view results including linear regression, K-Means clustering, and decision tree classification. The results are visualized using charts and graphs.
+
+#### Components
+
+1. **`data_processing.py`**: Handles data loading and cleaning.
+2. **`report_generation.py`**: Performs data analysis, generates reports, and visualizes results.
+3. **`app.py`**: Streamlit application that interacts with users, uploads data, and triggers analyses.
+
+#### Requirements
+
+Create or download a `requirements.txt` file to specify the dependencies required to run the application:
+
+```
+streamlit
+pandas
+matplotlib
+seaborn
+scikit-learn
+```
+
+#### Installation
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+#### Running the Application
+
+1. **Run the Streamlit App**:
+   ```bash
+   streamlit run app.py
+   ```
+
+2. **Access the Application**:
+   - Open your web browser and navigate to the URL provided by Streamlit (usually `http://localhost:8501`).
+
+#### Scripts Description
+
+1. **`data_processing.py`**:
+   - **`load_data(file)`**: Loads data from CSV, Excel, or JSON files.
+   - **`clean_data(df)`**: Cleans data by removing rows with missing values and retaining only numeric columns.
+
+2. **`report_generation.py`**:
+   - **`data_summary(df)`**: Displays basic statistics of the dataset.
+   - **`trend_analysis(df)`**: Analyzes trends and returns the correlation matrix.
+   - **`linear_regression_analysis(df)`**: Performs linear regression and plots a scatter plot with the regression line.
+   - **`kmeans_clustering(df)`**: Performs K-Means clustering and visualizes the clusters.
+   - **`decision_tree_analysis(df)`**: Performs decision tree classification and displays accuracy.
+   - **`generate_report(df)`**: Generates a comprehensive report including data summary, trend analysis, linear regression, K-Means clustering, and decision tree analysis with corresponding visualizations.
+
+3. **`app.py`**:
+   - **Upload File**: Allows users to upload CSV files for analysis.
+   - **Data Cleaning**: Cleans the uploaded data using the `data_processing` module.
+   - **Analysis Options**: Provides options for users to request specific analyses or a full summary report based on their queries.
+   - **Interactive Queries**: Uses basic NLP to interpret user queries and trigger the appropriate analysis functions.
+
+#### Example Usage
+
+1. **Upload a CSV File**: Click on the file uploader in the web application and select a CSV file.
+2. **Perform Analysis**:
+   - Enter queries like "linear regression", "K-Means clustering", "decision tree", "summary", or "trend analysis" to trigger respective analyses.
+3. **View Results**: Results will be displayed as text and visualizations directly in the web application.
+
+#### Troubleshooting
+
+- **If you encounter `NameError`**: Ensure that variable names and module imports are correctly defined.
+- **For Visualization Errors**: Verify that `matplotlib` and `seaborn` are correctly installed and imported.
+
+Feel free to modify and extend the functionalities as per your project needs. If you have any questions or need further customization, please let me know!
